@@ -31,7 +31,7 @@
 		if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:uri]]) {
 			NSURL *launchURL = [NSURL URLWithString:uri];
 			if (@available(iOS 10.0, *)) {
-				[[UIApplication sharedApplication] open:launchURL options:@{} completionHandler:nil];
+				[[UIApplication sharedApplication] openURL:launchURL options:@{} completionHandler:nil];
 			} else {
 				[[UIApplication sharedApplication] openURL: launchURL];
 			}
